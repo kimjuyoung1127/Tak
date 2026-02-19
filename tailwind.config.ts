@@ -99,7 +99,7 @@ const config: Config = {
       },
 
       maxWidth: {
-        "container": "1200px",
+        "container": "1400px",
       },
 
       keyframes: {
