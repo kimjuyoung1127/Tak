@@ -14,18 +14,18 @@ const config: Config = {
         card: "#FFFFFF",
         "card-foreground": "#1F2937",
 
-        /* ── Brand Accent ── */
+        /* ── Brand Accent (Rose #CB6664) ── */
         primary: {
-          DEFAULT: "#F59E0B",
+          DEFAULT: "#CB6664",
           foreground: "#FFFFFF",
-          50: "#FFFBEB",
-          100: "#FEF3C7",
-          200: "#FDE68A",
-          300: "#FCD34D",
-          400: "#FBBF24",
-          500: "#F59E0B",
-          600: "#D97706",
-          700: "#B45309",
+          50: "#FDF2F2",
+          100: "#FBE8E8",
+          200: "#F5CDCC",
+          300: "#EDA9A7",
+          400: "#DB8382",
+          500: "#CB6664",
+          600: "#B04E4C",
+          700: "#923D3B",
         },
 
         /* ── Trust / Strategy Blue ── */
@@ -58,7 +58,7 @@ const config: Config = {
         /* ── Semantic ── */
         destructive: "#EF4444",
         success: "#10B981",
-        ring: "#F59E0B",
+        ring: "#CB6664",
       },
 
       fontFamily: {
@@ -95,7 +95,7 @@ const config: Config = {
       boxShadow: {
         "card": "0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04)",
         "card-hover": "0 8px 24px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.06)",
-        "cta": "0 4px 14px rgba(245,158,11,0.35)",
+        "cta": "0 4px 14px rgba(203,102,100,0.35)",
       },
 
       maxWidth: {
