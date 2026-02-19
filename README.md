@@ -1,17 +1,41 @@
-# Tak
+# Tak Djang Design Studio
 
-A modern web application project.
+Next.js 14(App Router) 기반 포트폴리오/리드 전환 웹사이트입니다.
 
-## Project Structure
+## Stack
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- React Hook Form + Zod
+- EmailJS
 
-- `index.html`: The entry point for the web application.
-- `style.css`: Modern styling for the application.
-- `js/app.js`: Application logic.
+## Local Run
+```bash
+npm install
+npm run dev
+```
 
-## Getting Started
+## Validation
+```bash
+npm run lint
+npm run build
+```
 
-To view the project, simply open `index.html` in your favorite browser.
+## Environment Variables
+`.env.local`에 아래 키를 설정합니다.
 
-## Repository
+```bash
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+```
 
-- GitHub: [https://github.com/kimjuyoung1127/Tak.git](https://github.com/kimjuyoung1127/Tak.git)
+## Vercel Deploy
+1. 저장소를 Vercel에 import
+2. Framework Preset은 `Next.js` 유지
+3. Environment Variables에 EmailJS 3개 키 추가
+4. Deploy 실행
+5. 배포 후 `/`, `/portfolio/[slug]`, `/privacy`, `/robots.txt`, `/sitemap.xml` 확인
+
+상세 체크리스트: `docs/deploy-vercel.md`
