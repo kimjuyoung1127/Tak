@@ -1,0 +1,84 @@
+{
+  "template_root": "/Users/family/orca/workspaces/jason-agent-harness-template/spirula",
+  "template_commit": "57b7543",
+  "synced_on": "2026-07-31",
+  "project_name": "",
+  "assets": {
+    ".claude/automations/README.md": {
+      "local": "da6c36f001efb78309c9bbe093fd826da70daf1d3c6dcb6f68742931352f487b",
+      "src": "dadeafb97d86bc1409e6fc1b2937baedefa5217ccb0ffee19a29cb8f35841fbe"
+    },
+    ".claude/commands/doc-update.md": {
+      "local": "ef0ca6e1807bb8a9c7787b43c85d33039cd3faa39cea70cbb637c498714d3bb0",
+      "src": "6664e60636d1160a8fb19b95f37bd2c5cc952ff800f3ad5820de9cb3eda92892"
+    },
+    ".claude/commands/evidence-review.md": {
+      "local": "a79bd5af2b2ee16bc09687d155995ddcf509dd7dabacbbb21d3af8073bbd106e",
+      "src": "0abbea38da1fdfe8f3e55a35015c5f9e047b265b4a9e23410cf5f9a2eee9a0e9"
+    },
+    ".claude/commands/handoff.md": {
+      "local": "af1ab89b6b04c69fa7b8f844cb631b5985da45f58cbea04ef61e7925f0647618",
+      "src": "f48ed19a1fc62648c2e9934b147639a545f02f8b149377fdd9f09358e6efbff5"
+    },
+    ".claude/commands/impact-map.md": {
+      "local": "77ce32c5d59b7a798f7aae16d290b8d52b1bd1765b85a88ef8a04ef898a58c88",
+      "src": "585ed1c9f66421c42e7236d5e207910c5835e520e622a118cfb0091726c5e9a4"
+    },
+    ".claude/commands/intake.md": {
+      "local": "91751f08a35f4832f8051b376fc44463533a521be97c9328f87c386103f087c6",
+      "src": "44952566dd51d822284fd2efaf91af6213ae719b1c0d01a1f210de774cb13c77"
+    },
+    ".claude/commands/self-review.md": {
+      "local": "85ab38e97011bf59b4fc46767c3810c666a8b449b9ac43588b06b6ce9ac28535",
+      "src": "003433b0b563d9964b6845112dcd6c9855b2ce46b30bea3290bbf8a06b3a5796"
+    },
+    ".claude/hooks/doc-drift-reminder.sh": {
+      "local": "993d8142eb1ae9a9f3283a904a703eab4db8d3ff795bf209af7904971d8edf7a",
+      "src": "513e8e9a05f9d7348ad9464db681bd96a780e164ad6f1971b324f66fab793fae"
+    },
+    ".claude/hooks/self-review-gate.sh": {
+      "local": "ff3b3b2ab46b7ec393a038611d390d8b2f2ebec2fa37a2dc8d8bbed8fe2a82e2",
+      "src": "b860a67e7e2f183fd8c2475caac9bef6a8a75932434e1635d1eb306ef2619c25"
+    },
+    ".claude/settings.json": {
+      "local": "4b7a1dd099e06e9fdc9c902edf62ebab471206af83d7b8332cb59df93314dff9",
+      "src": "a8692e11a0db7a0010d8f4f6a18897f57dab617ea0744ad633d5a76b5db7b67f"
+    },
+    ".claude/skills/README.md": {
+      "local": "56e799b9828e0b0d1ab7c2b7478286c90ed2d91382209c308a3a9e25767ac4a2",
+      "src": "2ee595faa46ae2205148f69d5c705de9b3f59de1144989d5ec4941610f37f0ca"
+    },
+    ".claude/skills/claude-code-health/SKILL.md": {
+      "local": "b7ec18ed6ac5117f6624e24c9245dbfd6103a9d71ceaa5aa44fe1fe27f6f2ed8",
+      "src": "bb5585c5e43a2260c0667d3ce3aca1ff73c9da088594314411324dd0eb016d3f"
+    },
+    ".claude/skills/doc-health-audit/SKILL.md": {
+      "local": "bea230b889773ab485a3631384accd3ef1050acf9506882870f61fca6418cc55",
+      "src": "e599a73903148b88b057d76c58cd4f5247a4eae44efaf6ab63ef9388863c4499"
+    },
+    ".claude/skills/doc-sync/SKILL.md": {
+      "local": "3072ee169b0ff748cfbda52ba0468eb85b2c3df325efaa2e9c398d0618377d68",
+      "src": "28561aea5cd0e52e2bbf6eee0ba51c18224f832c1a82dda01ff73eb2669420b3"
+    },
+    ".claude/skills/evidence-review/SKILL.md": {
+      "local": "17f83e153d9c1847656d8f6ba5f38c6abb1da78a9b28ae74540203dddb4fc006",
+      "src": "c1b8b8b35b377fb9c5171dc7968168ede2df09b69f1cd6a7139a021883601b95"
+    },
+    ".claude/skills/session-retro/SKILL.md": {
+      "local": "2f154b7f7af69b435107af8c6cc12fe0465d2949bc7159b3118286dd49beb166",
+      "src": "f51b64402d1de8d8cd41ab20ec5f80b163b1258f4740d2caf501a72a7df576be"
+    },
+    ".claude/skills/task-intake-router/SKILL.md": {
+      "local": "ab9fbd4100a370547ba68cb19125e20ee82509a54ff2589e0bf8b011100b5dd9",
+      "src": "8cb4d9a00b68486980a83a388e05c88ab84f36d4bcd3661914dfb27e227a907f"
+    },
+    ".claude/skills/thin-doc-update/SKILL.md": {
+      "local": "24b09b2242228272dba546e98e446b4c661b851499bd0fc74c39af95be254caf",
+      "src": "1f2994d13b83060b1a8b5793a0454f9de638a81dd252434597df224ba55e2974"
+    },
+    ".codex/hooks.json": {
+      "local": "320540d9ee63693597cd8bcd8e2017cd81efa1a949dd451a638fdc7d9e8b8dae",
+      "src": "18eba7897f99c84a45161edb062a1804c6efb68e7c73c5b9b41a1b8da913fbaa"
+    }
+  }
+}
