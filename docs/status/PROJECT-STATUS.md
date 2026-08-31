@@ -61,11 +61,16 @@
 재현: `bash scripts/quality-gate.sh / /portfolio/baby-hairpin ...` → `.audit/*.json`
 계약: `docs/goals/GOAL-web-quality.md`
 
-| 지표 | 이전(운영 실측) | 현재 |
+**측정 규약**: 배포 직후 1회는 콜드 캐시라 근거로 쓰지 않는다. 캐시를 데운 뒤 **3회 중앙값**,
+실측 편차 8점(Perf 73~81)이므로 **5점 이내 차이로는 판정하지 않는다.**
+
+| 지표 | 이전(운영) | 현재(운영 워밍) |
 |---|---|---|
-| `/portfolio/baby-hairpin` 전송량 | 82,612 KiB | **1,332 KiB** |
-| 상세 페이지 CLS | 1.656 | **0** |
-| 홈 FCP (모바일) | 5.4s | **0.9s** |
+| 홈 모바일 Perf / LCP | 60 / 9.2s | **74 / 4.9s** |
+| 홈 데스크톱 Perf / LCP | 92 / 1.8s | **97 / 1.2s** |
+| 상세 Perf / LCP | 43 / 160.5s | **61 / 5.9s** |
+| 상세 전송량 | 82,612 KiB | **1,555 KiB** |
+| 상세 CLS | 1.656 | **0** |
 | Accessibility (전 라우트) | 85 | **100** |
 | SEO | 100 | **100** |
 | Best Practices | 79 | 79 (Google Ads 쿠키가 상한 — 코드로 못 올림) |
