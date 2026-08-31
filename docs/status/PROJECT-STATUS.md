@@ -61,8 +61,12 @@
 재현: `bash scripts/quality-gate.sh / /portfolio/baby-hairpin ...` → `.audit/*.json`
 계약: `docs/goals/GOAL-web-quality.md`
 
-**측정 규약**: 배포 직후 1회는 콜드 캐시라 근거로 쓰지 않는다. 캐시를 데운 뒤 **3회 중앙값**,
+**측정 규약**: 배포 직후 1회는 콜드 캐시라 근거로 쓰지 않는다. **4회 돌려 첫 회를 버리고 3회 중앙값**
+(curl 워밍은 부족 — `_next/image` 변형이 첫 요청에 생성돼 첫 Lighthouse 실행이 곧 워밍이다).
 실측 편차 8점(Perf 73~81)이므로 **5점 이내 차이로는 판정하지 않는다.**
+
+CSP 는 2026-08-31 강제 적용(Report-Only → enforce). 운영 위반 0, 광고 측정 4경로 전부 정상.
+되돌리려면 `next.config.mjs` 헤더 이름에 `-Report-Only` 만 다시 붙인다.
 
 | 지표 | 이전(운영) | 현재(운영 워밍) |
 |---|---|---|
