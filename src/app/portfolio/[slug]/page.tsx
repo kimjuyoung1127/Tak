@@ -12,6 +12,7 @@ import { KAKAO_CHANNEL_URL } from "@/lib/constants";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingCTA from "@/components/layout/FloatingCTA";
+import { DetailMedia } from "@/components/ui/DetailMedia";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { creativeWorkSchema, breadcrumbSchema } from "@/lib/seo/schema";
 
@@ -105,39 +106,23 @@ export default function PortfolioDetailPage({
           {/* ── 상세 이미지 갤러리 (상세페이지 스타일) ── */}
           {item.detailImages.length > 0 && (
             <div className="rounded-card-lg overflow-hidden bg-white mb-12">
-              {item.detailImages.map((imgUrl, i) => {
-                const isGif = imgUrl.toLowerCase().endsWith(".gif");
-                return isGif ? (
-                  /* eslint-disable-next-line @next/next/no-img-element */
-                  <img
-                    key={i}
-                    src={imgUrl}
-                    alt={`${item.title} ${i + 1}`}
-                    className="w-full h-auto block"
-                    loading="lazy"
-                  />
-                ) : (
-                  <Image
-                    key={i}
-                    src={imgUrl}
-                    alt={`${item.title} ${i + 1}`}
-                    width={860}
-                    height={0}
-                    sizes="(max-width: 896px) 100vw, 860px"
-                    className="w-full h-auto block"
-                    style={{ height: "auto" }}
-                    priority={i === 0}
-                  />
-                );
-              })}
+              {item.detailImages.map((asset, i) => (
+                <DetailMedia
+                  key={asset.src || i}
+                  asset={asset}
+                  alt={`${item.title} ${i + 1}`}
+                  sizes="(max-width: 896px) 100vw, 860px"
+                  priority={i === 0}
+                />
+              ))}
             </div>
           )}
 
           {/* 제공 범위 체크리스트 */}
           <div className="rounded-card bg-white shadow-card p-6 md:p-8 mb-12">
-            <h3 className="text-lg font-bold text-foreground mb-4">
+            <h2 className="text-lg font-bold text-foreground mb-4">
               제공 범위
-            </h3>
+            </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {item.deliverables.map((d) => (
                 <div
@@ -157,7 +142,7 @@ export default function PortfolioDetailPage({
           <div className="flex flex-col sm:flex-row gap-3 mb-16">
             <a
               href="/#contact"
-              className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary-600 transition-colors shadow-cta"
+              className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary-700 transition-colors shadow-cta"
             >
               무료 상담 신청
             </a>
@@ -175,9 +160,9 @@ export default function PortfolioDetailPage({
           {/* 유사 프로젝트 추천 */}
           {related.length > 0 && (
             <section>
-              <h3 className="text-xl font-bold text-foreground mb-6">
+              <h2 className="text-xl font-bold text-foreground mb-6">
                 유사 프로젝트
-              </h3>
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {related.map((r) => (
                   <Link
@@ -193,7 +178,6 @@ export default function PortfolioDetailPage({
                           fill
                           sizes="(max-width: 768px) 100vw, 33vw"
                           className="object-cover"
-                          unoptimized={r.thumbnail.endsWith(".gif")}
                         />
                       ) : (
                         <div className="flex items-center justify-center h-full text-muted-foreground text-xs">

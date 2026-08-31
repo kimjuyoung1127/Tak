@@ -95,15 +95,13 @@ const STUDIO_STRENGTHS: StrengthCard[][] = [
 ];
 
 const LANDING_PRIORITY_SLUGS = [
-  "baby-hairpin",
-  "baby-mat",
-  "cookie",
-  "baby-room",
   "strap",
   "tray-cover",
-  "baby-bed",
+  "baby-room",
   "water-jelly",
-  "buckwheat-pillow",
+  "baby-bed",
+  "baby-mat",
+  "baby-hairpin",
 ];
 
 type StairDirection = "leftToRight" | "rightToLeft";
@@ -221,7 +219,6 @@ export default function PortfolioSection({ portfolios }: PortfolioSectionProps) 
                               sizes="(max-width: 768px) 100vw, 33vw"
                               className="object-cover transition-transform duration-500 group-hover:scale-105"
                               priority={g === 0 && col === 0}
-                              unoptimized={item.thumbnail.endsWith(".gif")}
                             />
                           ) : (
                             <div className="absolute inset-0 flex items-center justify-center bg-gray-100">

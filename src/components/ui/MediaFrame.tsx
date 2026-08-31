@@ -46,7 +46,6 @@ export function MediaFrame({
           fill
           sizes={sizes}
           priority={priority}
-          unoptimized={src.endsWith(".gif")}
           className={cn(
             "object-cover",
             grayscale &&

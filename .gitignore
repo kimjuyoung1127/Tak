@@ -29,3 +29,10 @@ next-env.d.ts
 
 # vercel
 .vercel
+
+# audit output
+.audit/
+
+# GIF 원본 보관소 — 변환 전 파일. git 히스토리에 이미 public/portfolio/**.gif 로 남아 있어
+# (git show <이전커밋>:경로 로 복구 가능) 135MB 를 다시 커밋하지 않는다.
+assets-src/

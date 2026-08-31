@@ -1,9 +1,25 @@
 import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
 import { SITE, VERIFICATION } from "@/lib/seo/site";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { organizationSchema, websiteSchema } from "@/lib/seo/schema";
 import { Analytics } from "@/components/analytics/Analytics";
+
+/**
+ * Pretendard 자체 호스팅.
+ * 이전에는 jsdelivr CSS를 <link>로 물려 렌더가 2,090ms 막혔다(모바일 실측).
+ * next/font/local 은 @font-face 를 앱 CSS에 인라인하고 woff2 를 preload 하므로
+ * 외부 origin 왕복도, 렌더 차단도 없다.
+ * 서브셋 = KS X 1001 상용 한글 2,350자 + 사이트 실사용 문자 + 라틴/구두점 (scripts/build-font-subset.sh).
+ */
+const pretendard = localFont({
+  src: "./fonts/PretendardVariable.subset.woff2",
+  display: "swap",
+  weight: "45 920",
+  variable: "--font-pretendard",
+  preload: true,
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -62,16 +78,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko">
-      <head>
-        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
-        <link
-          rel="stylesheet"
-          as="style"
-          crossOrigin="anonymous"
-          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
-        />
-      </head>
+    <html lang="ko" className={pretendard.variable}>
       <body>
         {children}
         <JsonLd data={[organizationSchema(), websiteSchema()]} />

@@ -33,7 +33,7 @@ export const PORTFOLIO_ITEMS: PortfolioItemData[] = [
     publishedAt: "2026-06-23",
     featured: true,
     tags: ["유아", "상세페이지", "유아매트"],
-    displayOrder: -5,
+    displayOrder: -2,
   },
   {
     slug: "baby-hairpin",
@@ -46,7 +46,7 @@ export const PORTFOLIO_ITEMS: PortfolioItemData[] = [
     publishedAt: "2026-06-23",
     featured: true,
     tags: ["유아", "상세페이지", "헤어핀"],
-    displayOrder: -6,
+    displayOrder: -1,
   },
   {
     slug: "cookie",
@@ -59,7 +59,6 @@ export const PORTFOLIO_ITEMS: PortfolioItemData[] = [
     publishedAt: "2026-06-23",
     featured: true,
     tags: ["식품", "상세페이지", "쿠키"],
-    displayOrder: -4,
   },
   {
     slug: "baby-room",
@@ -72,11 +71,11 @@ export const PORTFOLIO_ITEMS: PortfolioItemData[] = [
     publishedAt: "2026-06-23",
     featured: true,
     tags: ["유아", "상세페이지", "베이비룸"],
-    displayOrder: -3,
+    displayOrder: -5,
   },
   {
     slug: "strap",
-    title: "스트랩 상세페이지",
+    title: "멀티스트랩 상세페이지",
     clientType: "온라인 셀러",
     category: ["상세페이지", "리빙"],
     industry: "리빙/잡화",
@@ -84,8 +83,8 @@ export const PORTFOLIO_ITEMS: PortfolioItemData[] = [
     kpi: "구매전환 최적화",
     publishedAt: "2026-06-23",
     featured: true,
-    tags: ["리빙", "상세페이지", "스트랩"],
-    displayOrder: -2,
+    tags: ["리빙", "상세페이지", "멀티스트랩"],
+    displayOrder: -7,
   },
   {
     slug: "tray-cover",
@@ -98,7 +97,7 @@ export const PORTFOLIO_ITEMS: PortfolioItemData[] = [
     publishedAt: "2026-06-23",
     featured: true,
     tags: ["리빙", "상세페이지", "트레이커버"],
-    displayOrder: -1,
+    displayOrder: -6,
   },
   {
     slug: "ricecake",
@@ -160,7 +159,7 @@ export const PORTFOLIO_ITEMS: PortfolioItemData[] = [
     publishedAt: "2026-01-20",
     featured: true,
     tags: ["식품", "상세페이지", "워터젤리"],
-    displayOrder: 2,
+    displayOrder: -4,
   },
   {
     slug: "baby-bed",
@@ -173,7 +172,7 @@ export const PORTFOLIO_ITEMS: PortfolioItemData[] = [
     publishedAt: "2026-01-22",
     featured: true,
     tags: ["리빙", "상세페이지", "유아침대"],
-    displayOrder: 1,
+    displayOrder: -3,
   },
   {
     slug: "tv-mount",

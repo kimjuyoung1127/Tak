@@ -1,3 +1,5 @@
+import type { MediaAsset } from "@/lib/content/media";
+
 /** 포트폴리오 콘텐츠 스키마 (PRD 4.2) */
 export interface PortfolioItem {
   slug: string;
@@ -14,7 +16,7 @@ export interface PortfolioItem {
   tags: string[];
   /** 목록/추천에서 먼저 보여줄 수동 우선순위. 낮을수록 먼저 노출 */
   displayOrder?: number;
-  detailImages: string[];
+  detailImages: MediaAsset[];
   /** 외부 링크 항목(와디즈 펀딩·블로그 운영 등). 있으면 내부 상세페이지 대신 외부로 연결 */
   externalUrl?: string;
   /** 외부 링크 버튼 라벨 (예: "와디즈에서 보기") */

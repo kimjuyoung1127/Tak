@@ -131,13 +131,18 @@ export function TestimonialCarousel({ items }: { items: Testimonial[] }) {
               aria-selected={i === index}
               aria-label={`${i + 1}번째 후기 보기`}
               onClick={() => goTo(i)}
-              className={cn(
-                "h-2 rounded-full transition-all",
-                i === index
-                  ? "w-6 bg-primary"
-                  : "w-2 bg-border hover:bg-muted-foreground"
-              )}
-            />
+              /* 점은 8px 그대로 보이되 누를 수 있는 면적은 24px — WCAG 2.2 타깃 크기 */
+              className="group flex h-6 w-6 items-center justify-center"
+            >
+              <span
+                className={cn(
+                  "block h-2 rounded-full transition-all",
+                  i === index
+                    ? "w-6 bg-primary"
+                    : "w-2 bg-border group-hover:bg-muted-foreground"
+                )}
+              />
+            </button>
           ))}
         </div>
 

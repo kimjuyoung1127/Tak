@@ -14,10 +14,10 @@ export const buttonVariants = cva(
       variant: {
         // 메인 CTA — 탁디장 브랜드 로즈(로고색)
         primary:
-          "bg-primary text-primary-foreground hover:bg-primary-600 shadow-cta",
+          "bg-primary text-primary-foreground hover:bg-primary-700 shadow-cta",
         // 로즈 액센트 CTA (primary와 동일 계열 — 다크 배경 위 포인트용)
         accent:
-          "bg-primary text-primary-foreground hover:bg-primary-600 shadow-cta",
+          "bg-primary text-primary-foreground hover:bg-primary-700 shadow-cta",
         outline:
           "border border-foreground/15 bg-white text-foreground hover:bg-muted",
         outlineDark:

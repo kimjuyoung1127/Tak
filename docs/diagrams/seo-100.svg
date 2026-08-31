@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 900" width="1360" height="900" font-family="'Pretendard','Apple SD Gothic Neo',system-ui,sans-serif">
+<!-- tak:verified=2026-08-31 tak:tool=Lighthouse 12.8.2 (mobile, production build) tak:sources=src/app|src/lib/seo -->
+<rect width="1360" height="900" fill="#faf9f7"/>
+
+<!-- ── 헤더 ── -->
+<text x="34" y="48" font-size="26" font-weight="700" fill="#1a1c1b">SEO 100점의 근거</text>
+<text x="34" y="76" font-size="14" fill="#5f5f5c">Lighthouse SEO 카테고리는 10개 항목을 자동 채점한다. takdijang.com 은 10/10 통과.</text>
+<text x="34" y="97" font-size="13" fill="#8a8a86">측정: Lighthouse 12.8.2 · 모바일 · 프로덕션 빌드 · 2026-08-31</text>
+
+<rect x="1120" y="26" width="220" height="72" rx="10" fill="#eef6ee" stroke="#2f7d32" stroke-width="1.5"/>
+<text x="1230" y="60" font-size="30" font-weight="700" fill="#2f7d32" text-anchor="middle">100 / 100</text>
+<text x="1230" y="82" font-size="13" font-weight="600" fill="#2f7d32" text-anchor="middle">SEO · 자동 항목 10개 전부</text>
+
+<!-- ══════════ 1. 크롤 &amp; 색인 ══════════ -->
+<rect x="34" y="126" width="626" height="278" rx="10" fill="#ffffff" stroke="#dcdad5"/>
+<path d="M34,136 a10,10 0 0 1 10,-10 h606 a10,10 0 0 1 10,10 v30 h-626 z" fill="#ba1a1a"/>
+<text x="52" y="157" font-size="16" font-weight="700" fill="#ffffff">1 · 크롤과 색인 — 검색봇이 들어올 수 있는가</text>
+
+<circle cx="60" cy="203" r="9" fill="#eef6ee" stroke="#2f7d32" stroke-width="1.4"/>
+<text x="60" y="208" font-size="12" font-weight="700" fill="#2f7d32" text-anchor="middle">✓</text>
+<text x="80" y="199" font-size="14" font-weight="600" fill="#1a1c1b">is-crawlable</text>
+<text x="80" y="218" font-size="13" fill="#5f5f5c">색인 차단이 없다 — 렌더된 메타가 index, follow</text>
+
+<circle cx="60" cy="252" r="9" fill="#eef6ee" stroke="#2f7d32" stroke-width="1.4"/>
+<text x="60" y="257" font-size="12" font-weight="700" fill="#2f7d32" text-anchor="middle">✓</text>
+<text x="80" y="248" font-size="14" font-weight="600" fill="#1a1c1b">robots-txt</text>
+<text x="80" y="267" font-size="13" fill="#5f5f5c">문법 유효 + sitemap 주소 명시</text>
+
+<circle cx="60" cy="301" r="9" fill="#eef6ee" stroke="#2f7d32" stroke-width="1.4"/>
+<text x="60" y="306" font-size="12" font-weight="700" fill="#2f7d32" text-anchor="middle">✓</text>
+<text x="80" y="297" font-size="14" font-weight="600" fill="#1a1c1b">http-status-code</text>
+<text x="80" y="316" font-size="13" fill="#5f5f5c">200 응답 (35개 라우트 전부 정적 생성)</text>
+
+<rect x="52" y="336" width="590" height="52" rx="6" fill="#f7f6f4"/>
+<text x="66" y="356" font-size="12" font-weight="600" fill="#8a8a86">실측 근거</text>
+<text x="66" y="376" font-size="12.5" fill="#3f3f3d">src/app/robots.ts · layout.tsx robots:{index,follow} · 렌더 HTML "index, follow"</text>
+
+<!-- ══════════ 2. 메타데이터 ══════════ -->
+<rect x="700" y="126" width="626" height="278" rx="10" fill="#ffffff" stroke="#dcdad5"/>
+<path d="M700,136 a10,10 0 0 1 10,-10 h606 a10,10 0 0 1 10,10 v30 h-626 z" fill="#1c71d8"/>
+<text x="718" y="157" font-size="16" font-weight="700" fill="#ffffff">2 · 메타데이터 — 무슨 페이지인지 말해주는가</text>
+
+<circle cx="726" cy="203" r="9" fill="#eef6ee" stroke="#2f7d32" stroke-width="1.4"/>
+<text x="726" y="208" font-size="12" font-weight="700" fill="#2f7d32" text-anchor="middle">✓</text>
+<text x="746" y="199" font-size="14" font-weight="600" fill="#1a1c1b">document-title · meta-description</text>
+<text x="746" y="218" font-size="13" fill="#5f5f5c">라우트마다 고유 제목 + 78자 설명 (템플릿 %s | 탁디장)</text>
+
+<circle cx="726" cy="252" r="9" fill="#eef6ee" stroke="#2f7d32" stroke-width="1.4"/>
+<text x="726" y="257" font-size="12" font-weight="700" fill="#2f7d32" text-anchor="middle">✓</text>
+<text x="746" y="248" font-size="14" font-weight="600" fill="#1a1c1b">canonical</text>
+<text x="746" y="267" font-size="13" fill="#5f5f5c">자기참조 canonical — 중복 URL로 색인이 갈리지 않는다</text>
+
+<circle cx="726" cy="301" r="9" fill="#eef6ee" stroke="#2f7d32" stroke-width="1.4"/>
+<text x="726" y="306" font-size="12" font-weight="700" fill="#2f7d32" text-anchor="middle">✓</text>
+<text x="746" y="297" font-size="14" font-weight="600" fill="#1a1c1b">hreflang</text>
+<text x="746" y="316" font-size="13" fill="#5f5f5c">html lang="ko" + og:locale ko_KR 일치</text>
+
+<rect x="718" y="336" width="590" height="52" rx="6" fill="#f7f6f4"/>
+<text x="732" y="356" font-size="12" font-weight="600" fill="#8a8a86">실측 근거</text>
+<text x="732" y="376" font-size="12.5" fill="#3f3f3d">canonical 선언 11개 파일 · 렌더 HTML canonical=https://takdijang.com</text>
+
+<!-- ══════════ 3. 콘텐츠 접근성 ══════════ -->
+<rect x="34" y="436" width="626" height="278" rx="10" fill="#ffffff" stroke="#dcdad5"/>
+<path d="M34,446 a10,10 0 0 1 10,-10 h606 a10,10 0 0 1 10,10 v30 h-626 z" fill="#b06d00"/>
+<text x="52" y="467" font-size="16" font-weight="700" fill="#ffffff">3 · 콘텐츠 접근성 — 봇이 내용을 읽을 수 있는가</text>
+
+<circle cx="60" cy="513" r="9" fill="#eef6ee" stroke="#2f7d32" stroke-width="1.4"/>
+<text x="60" y="518" font-size="12" font-weight="700" fill="#2f7d32" text-anchor="middle">✓</text>
+<text x="80" y="509" font-size="14" font-weight="600" fill="#1a1c1b">crawlable-anchors</text>
+<text x="80" y="528" font-size="13" fill="#5f5f5c">모든 링크가 href 를 가진 진짜 a 태그 — onClick div 0개</text>
+
+<circle cx="60" cy="562" r="9" fill="#eef6ee" stroke="#2f7d32" stroke-width="1.4"/>
+<text x="60" y="567" font-size="12" font-weight="700" fill="#2f7d32" text-anchor="middle">✓</text>
+<text x="80" y="558" font-size="14" font-weight="600" fill="#1a1c1b">link-text</text>
+<text x="80" y="577" font-size="13" fill="#5f5f5c">"여기 클릭" 없음 — "전체 서비스 자세히 보기" 식 서술형</text>
+
+<circle cx="60" cy="611" r="9" fill="#eef6ee" stroke="#2f7d32" stroke-width="1.4"/>
+<text x="60" y="616" font-size="12" font-weight="700" fill="#2f7d32" text-anchor="middle">✓</text>
+<text x="80" y="607" font-size="14" font-weight="600" fill="#1a1c1b">image-alt</text>
+<text x="80" y="626" font-size="13" fill="#5f5f5c">alt 누락 0개 — 장식 이미지는 alt="" 로 명시적 제외</text>
+
+<rect x="52" y="646" width="590" height="52" rx="6" fill="#f7f6f4"/>
+<text x="66" y="666" font-size="12" font-weight="600" fill="#8a8a86">실측 근거</text>
+<text x="66" y="686" font-size="12.5" fill="#3f3f3d">빌드 산출 HTML 파싱: alt 없는 img 0개 · 소스 grep: onClick 달린 div/span 0개</text>
+
+<!-- ══════════ 4. 구조화 데이터 ══════════ -->
+<rect x="700" y="436" width="626" height="278" rx="10" fill="#ffffff" stroke="#dcdad5"/>
+<path d="M700,446 a10,10 0 0 1 10,-10 h606 a10,10 0 0 1 10,10 v30 h-626 z" fill="#9141ac"/>
+<text x="718" y="467" font-size="16" font-weight="700" fill="#ffffff">4 · 구조화 데이터 — 검색 결과에 풍부하게 뜨는가</text>
+
+<text x="726" y="502" font-size="13" fill="#5f5f5c">JSON-LD 스키마 7종을 라우트 성격에 맞춰 주입한다.</text>
+
+<g font-size="12.5" font-weight="600" fill="#5c2d6b">
+  <rect x="726" y="516" width="118" height="28" rx="14" fill="#f6eefa"/><text x="785" y="535" text-anchor="middle">Organization</text>
+  <rect x="854" y="516" width="94" height="28" rx="14" fill="#f6eefa"/><text x="901" y="535" text-anchor="middle">WebSite</text>
+  <rect x="958" y="516" width="112" height="28" rx="14" fill="#f6eefa"/><text x="1014" y="535" text-anchor="middle">BreadcrumbList</text>
+  <rect x="1080" y="516" width="94" height="28" rx="14" fill="#f6eefa"/><text x="1127" y="535" text-anchor="middle">FAQPage</text>
+  <rect x="726" y="552" width="106" height="28" rx="14" fill="#f6eefa"/><text x="779" y="571" text-anchor="middle">ServiceList</text>
+  <rect x="842" y="552" width="112" height="28" rx="14" fill="#f6eefa"/><text x="898" y="571" text-anchor="middle">CreativeWork</text>
+  <rect x="964" y="552" width="86" height="28" rx="14" fill="#f6eefa"/><text x="1007" y="571" text-anchor="middle">Product</text>
+</g>
+
+<text x="726" y="611" font-size="13" fill="#5f5f5c">홈 한 장에만 JSON-LD 블록 4개가 실려 나간다 (FAQPage 포함).</text>
+<text x="726" y="632" font-size="12.5" fill="#8a8a86">Lighthouse 는 이 항목에 점수를 매기지 않는다 — 문법만 보고 수동 확인 대상으로 남긴다.</text>
+
+<rect x="718" y="646" width="590" height="52" rx="6" fill="#f7f6f4"/>
+<text x="732" y="666" font-size="12" font-weight="600" fill="#8a8a86">실측 근거</text>
+<text x="732" y="686" font-size="12.5" fill="#3f3f3d">src/lib/seo/schema.ts 함수 7개 · 렌더 HTML 내 application/ld+json 블록 4개</text>
+
+<!-- ══════════ 하단: 100점이 보장하지 않는 것 ══════════ -->
+<rect x="34" y="742" width="1292" height="124" rx="10" fill="#fff8f0" stroke="#b06d00" stroke-width="1.3"/>
+<text x="56" y="772" font-size="15" font-weight="700" fill="#7a4b00">100점이 보장하지 않는 것</text>
+<text x="56" y="798" font-size="13.5" fill="#3f3f3d">Lighthouse SEO 점수는 <tspan font-weight="700">기술적 체크리스트</tspan>다. 검색봇이 걸려 넘어질 만한 것이 없다는 뜻이지, 검색 순위를 예측하지 않는다.</text>
+<text x="56" y="822" font-size="13.5" fill="#3f3f3d">순위를 만드는 것은 콘텐츠의 유용성과 도메인 신뢰도이고, 그건 이 점수 밖에 있다. 구조화 데이터도 리치 결과 <tspan font-weight="700">자격</tspan>을 줄 뿐 노출을 확정하지 않는다.</text>
+<text x="56" y="846" font-size="13.5" fill="#3f3f3d">색인 반영 여부는 Search Console 의 실제 색인 상태로만 확인된다 — 이 도표는 그 앞단, "차단 요소가 없다"까지를 증명한다.</text>
+
+<text x="1326" y="886" font-size="11.5" fill="#a5a5a1" text-anchor="end">takdijang.com · 2026-08-31 실측</text>
+</svg>

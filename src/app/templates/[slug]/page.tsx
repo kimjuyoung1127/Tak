@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
 import { ArrowLeft, ArrowUpRight, Check, MessageCircle } from "lucide-react";
 import Header from "@/components/layout/Header";
@@ -15,6 +14,7 @@ import {
   formatPrice,
 } from "@/lib/content/templates";
 import { getTemplateImages } from "@/lib/content/template-images";
+import { DetailMedia } from "@/components/ui/DetailMedia";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { productSchema, breadcrumbSchema } from "@/lib/seo/schema";
 
@@ -166,31 +166,15 @@ export default function TemplateDetailPage({
           {/* 세로로 긴 상세 이미지 (순서대로 스택) */}
           {images.length > 0 ? (
             <div className="overflow-hidden rounded-card-lg bg-white">
-              {images.map((src, i) => {
-                const isGif = src.toLowerCase().endsWith(".gif");
-                return isGif ? (
-                  /* eslint-disable-next-line @next/next/no-img-element */
-                  <img
-                    key={src}
-                    src={src}
-                    alt={`${product.name} 상세 ${i + 1}`}
-                    className="block h-auto w-full"
-                    loading="lazy"
-                  />
-                ) : (
-                  <Image
-                    key={src}
-                    src={src}
-                    alt={`${product.name} 상세 ${i + 1}`}
-                    width={860}
-                    height={0}
-                    sizes="(max-width: 768px) 100vw, 768px"
-                    className="block h-auto w-full"
-                    style={{ height: "auto" }}
-                    priority={i === 0}
-                  />
-                );
-              })}
+              {images.map((asset, i) => (
+                <DetailMedia
+                  key={asset.src || i}
+                  asset={asset}
+                  alt={`${product.name} 상세 ${i + 1}`}
+                  sizes="(max-width: 768px) 100vw, 768px"
+                  priority={i === 0}
+                />
+              ))}
             </div>
           ) : (
             <div className="rounded-card border border-dashed border-border bg-muted py-20 text-center text-sm text-muted-foreground">

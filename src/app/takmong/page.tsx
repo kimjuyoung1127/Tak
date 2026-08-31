@@ -105,7 +105,7 @@ export default function TakmongPage() {
             {TEMPLATE_PRODUCTS.map((p) => {
               const rate = discountRate(p);
               const detailImages = getTemplateImages(p.slug);
-              const thumb = p.image ?? detailImages[0];
+              const thumb = p.image ?? detailImages[0]?.src;
               const hasDetail = detailImages.length > 0;
               const detailHref = `/templates/${p.slug}`;
               return (

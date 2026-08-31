@@ -14,9 +14,14 @@ const config: Config = {
         card: "#FFFFFF",
         "card-foreground": "#1A1A1A",
 
-        /* ── Brand Accent (Rose #CB6664) ── */
+        /* ── Brand Accent (Rose) ──
+           원래 500(#CB6664)은 흰 글자 대비 3.73:1, 오프화이트 위 본문 3.57:1 로 WCAG AA(4.5:1) 미달이었다.
+           DEFAULT 는 그 색상각(hue)을 그대로 두고 채도를 올려 밝기를 되찾은 값이다 —
+           #BD4442 는 primary 텍스트가 놓이는 배경 3종 모두에서 통과한다 —
+           흰 카드 5.16:1 · 오프화이트 4.94:1 · muted(#F2F1EE) 4.57:1. 후기 섹션이 muted 배경이라 이게 기준선이다.
+           연한 로즈가 필요한 자리는 primary-500 을 직접 지목해 쓴다. */
         primary: {
-          DEFAULT: "#CB6664",
+          DEFAULT: "#BD4442",
           foreground: "#FFFFFF",
           50: "#FDF2F2",
           100: "#FBE8E8",
@@ -45,7 +50,8 @@ const config: Config = {
         /* ── Muted / Border (warm neutral) ── */
         muted: {
           DEFAULT: "#F2F1EE",
-          foreground: "#6F6F6C",
+          /* #6F6F6C 는 muted 배경(#F2F1EE) 위에서 4.46:1 로 AA(4.5:1)에 미달했다. 한 톤만 낮춰 4.66:1. */
+          foreground: "#6C6C69",
         },
         border: "#E6E4DF",
 
@@ -63,6 +69,7 @@ const config: Config = {
 
       fontFamily: {
         sans: [
+          "var(--font-pretendard)",
           "Pretendard Variable",
           "Pretendard",
           "-apple-system",

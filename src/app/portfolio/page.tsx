@@ -60,7 +60,6 @@ export default function PortfolioIndexPage() {
                         sizes="(max-width: 768px) 100vw, 33vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                         priority={index === 0}
-                        unoptimized={item.thumbnail.endsWith(".gif")}
                       />
                     ) : (
                       <div className="absolute inset-0 flex items-center justify-center">

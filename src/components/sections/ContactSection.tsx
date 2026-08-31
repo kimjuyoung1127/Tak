@@ -121,17 +121,20 @@ export default function ContactSection() {
 
             {/* 이름 */}
             <div>
-              <label className="block text-sm font-medium text-foreground mb-1.5 break-keep">
+              <label htmlFor="inquiry-name" className="block text-sm font-medium text-foreground mb-1.5 break-keep">
                 이름 <span className="text-destructive">*</span>
               </label>
               <input
                 type="text"
                 placeholder="홍길동"
                 className={cn(inputClass, errors.name && "border-destructive")}
+                id="inquiry-name"
+                aria-invalid={!!errors.name}
+                aria-describedby={errors.name ? "inquiry-name-error" : undefined}
                 {...register("name")}
               />
               {errors.name && (
-                <p className="mt-1 text-xs text-destructive">
+                <p id="inquiry-name-error" className="mt-1 text-xs text-destructive">
                   {errors.name.message}
                 </p>
               )}
@@ -139,7 +142,7 @@ export default function ContactSection() {
 
             {/* 브랜드/스토어 */}
             <div>
-              <label className="block text-sm font-medium text-foreground mb-1.5">
+              <label htmlFor="inquiry-brandOrStore" className="block text-sm font-medium text-foreground mb-1.5">
                 브랜드 또는 스토어명 <span className="text-destructive">*</span>
               </label>
               <input
@@ -149,10 +152,13 @@ export default function ContactSection() {
                   inputClass,
                   errors.brandOrStore && "border-destructive"
                 )}
+                id="inquiry-brandOrStore"
+                aria-invalid={!!errors.brandOrStore}
+                aria-describedby={errors.brandOrStore ? "inquiry-brandOrStore-error" : undefined}
                 {...register("brandOrStore")}
               />
               {errors.brandOrStore && (
-                <p className="mt-1 text-xs text-destructive">
+                <p id="inquiry-brandOrStore-error" className="mt-1 text-xs text-destructive">
                   {errors.brandOrStore.message}
                 </p>
               )}
@@ -160,7 +166,7 @@ export default function ContactSection() {
 
             {/* 연락처 */}
             <div>
-              <label className="block text-sm font-medium text-foreground mb-1.5">
+              <label htmlFor="inquiry-contact" className="block text-sm font-medium text-foreground mb-1.5">
                 연락처 <span className="text-destructive">*</span>
               </label>
               <input
@@ -170,10 +176,13 @@ export default function ContactSection() {
                   inputClass,
                   errors.contact && "border-destructive"
                 )}
+                id="inquiry-contact"
+                aria-invalid={!!errors.contact}
+                aria-describedby={errors.contact ? "inquiry-contact-error" : undefined}
                 {...register("contact")}
               />
               {errors.contact && (
-                <p className="mt-1 text-xs text-destructive">
+                <p id="inquiry-contact-error" className="mt-1 text-xs text-destructive">
                   {errors.contact.message}
                 </p>
               )}
@@ -182,7 +191,7 @@ export default function ContactSection() {
             {/* 문의유형 / 예산범위 */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div>
-                <label className="block text-sm font-medium text-foreground mb-1.5">
+                <label htmlFor="inquiry-inquiryType" className="block text-sm font-medium text-foreground mb-1.5">
                   문의 유형 <span className="text-destructive">*</span>
                 </label>
                 <select
@@ -190,7 +199,10 @@ export default function ContactSection() {
                     inputClass,
                     errors.inquiryType && "border-destructive"
                   )}
-                  {...register("inquiryType")}
+                  id="inquiry-inquiryType"
+                aria-invalid={!!errors.inquiryType}
+                aria-describedby={errors.inquiryType ? "inquiry-inquiryType-error" : undefined}
+                {...register("inquiryType")}
                   defaultValue=""
                 >
                   <option value="" disabled>
@@ -203,14 +215,14 @@ export default function ContactSection() {
                   ))}
                 </select>
                 {errors.inquiryType && (
-                  <p className="mt-1 text-xs text-destructive">
+                  <p id="inquiry-inquiryType-error" className="mt-1 text-xs text-destructive">
                     {errors.inquiryType.message}
                   </p>
                 )}
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-foreground mb-1.5">
+                <label htmlFor="inquiry-budgetRange" className="block text-sm font-medium text-foreground mb-1.5">
                   예산 범위 <span className="text-destructive">*</span>
                 </label>
                 <select
@@ -218,7 +230,10 @@ export default function ContactSection() {
                     inputClass,
                     errors.budgetRange && "border-destructive"
                   )}
-                  {...register("budgetRange")}
+                  id="inquiry-budgetRange"
+                aria-invalid={!!errors.budgetRange}
+                aria-describedby={errors.budgetRange ? "inquiry-budgetRange-error" : undefined}
+                {...register("budgetRange")}
                   defaultValue=""
                 >
                   <option value="" disabled>
@@ -231,7 +246,7 @@ export default function ContactSection() {
                   ))}
                 </select>
                 {errors.budgetRange && (
-                  <p className="mt-1 text-xs text-destructive">
+                  <p id="inquiry-budgetRange-error" className="mt-1 text-xs text-destructive">
                     {errors.budgetRange.message}
                   </p>
                 )}
@@ -240,19 +255,20 @@ export default function ContactSection() {
 
             {/* 마감일 */}
             <div>
-              <label className="block text-sm font-medium text-foreground mb-1.5">
+              <label htmlFor="inquiry-deadline" className="block text-sm font-medium text-foreground mb-1.5">
                 희망 마감일
               </label>
               <input
                 type="date"
                 className={inputClass}
+                id="inquiry-deadline"
                 {...register("deadline")}
               />
             </div>
 
             {/* 요청사항 */}
             <div>
-              <label className="block text-sm font-medium text-foreground mb-1.5">
+              <label htmlFor="inquiry-message" className="block text-sm font-medium text-foreground mb-1.5">
                 요청사항 <span className="text-destructive">*</span>
               </label>
               <textarea
@@ -263,10 +279,13 @@ export default function ContactSection() {
                   "resize-none",
                   errors.message && "border-destructive"
                 )}
+                id="inquiry-message"
+                aria-invalid={!!errors.message}
+                aria-describedby={errors.message ? "inquiry-message-error" : undefined}
                 {...register("message")}
               />
               {errors.message && (
-                <p className="mt-1 text-xs text-destructive">
+                <p id="inquiry-message-error" className="mt-1 text-xs text-destructive">
                   {errors.message.message}
                 </p>
               )}
