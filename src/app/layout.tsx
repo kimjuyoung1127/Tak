@@ -9,16 +9,20 @@ import { Analytics } from "@/components/analytics/Analytics";
 /**
  * Pretendard 자체 호스팅.
  * 이전에는 jsdelivr CSS를 <link>로 물려 렌더가 2,090ms 막혔다(모바일 실측).
- * next/font/local 은 @font-face 를 앱 CSS에 인라인하고 woff2 를 preload 하므로
- * 외부 origin 왕복도, 렌더 차단도 없다.
+ * next/font/local 은 @font-face 를 앱 CSS에 인라인하므로 외부 origin 왕복도, 렌더 차단도 없다.
  * 서브셋 = KS X 1001 상용 한글 2,350자 + 사이트 실사용 문자 + 라틴/구두점 (scripts/build-font-subset.sh).
+ *
+ * preload: false — 이 사이트의 LCP 요소는 텍스트가 아니라 히어로 배경 이미지다.
+ * preload 를 켜면 442KB woff2 가 High 우선순위로 72ms 에 먼저 나가면서
+ * LCP 이미지(Low 우선순위, 910ms 시작)의 대역폭을 뺏는다 — 운영 실측에서 모바일 LCP 가
+ * 9.2s → 9.9s 로 되레 나빠졌다. display:swap 이라 폰트는 늦게 와도 글자가 안 보이지 않는다.
  */
 const pretendard = localFont({
   src: "./fonts/PretendardVariable.subset.woff2",
   display: "swap",
   weight: "45 920",
   variable: "--font-pretendard",
-  preload: true,
+  preload: false,
 });
 
 export const metadata: Metadata = {
