@@ -60,12 +60,14 @@ const csp = [
 ].join("; ");
 
 /**
- * CSP 는 Report-Only 로 먼저 나간다.
- * 운영에서 위반 리포트가 0인 것을 확인한 뒤 헤더 이름을 `Content-Security-Policy` 로 바꿔 강제한다.
- * 처음부터 강제하면 아직 못 본 광고 출처 하나 때문에 전환 측정이 조용히 멈출 수 있다.
+ * CSP 강제 적용 (2026-08-31).
+ * Report-Only 로 먼저 배포해 운영에서 실제 위반을 수집했고, 두 출처
+ * (ad.doubleclick.net · www.google.com — Google Ads 리마케팅 비콘 리다이렉트)를
+ * 허용 목록에 반영한 뒤 위반 0을 확인하고 강제로 올렸다.
+ * 되돌릴 일이 생기면 헤더 이름에 `-Report-Only` 만 다시 붙이면 된다.
  */
 const securityHeaders = [
-  { key: "Content-Security-Policy-Report-Only", value: csp },
+  { key: "Content-Security-Policy", value: csp },
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "X-Frame-Options", value: "SAMEORIGIN" },
